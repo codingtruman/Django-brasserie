@@ -1,0 +1,10 @@
+.DS_Store
+.env
+db.sqlite3
+*.pyc
+*.log
+__pycache__
+# pytest:
+assets/
+report.html
+.pytest_cache
