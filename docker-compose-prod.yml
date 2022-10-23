@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  barproject:
+    build: .
+    container_name: barproject_prod
+    command: >
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py loaddata api &&
+             python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - 80:8000
+    restart: always
+    environment:
+      - UNYC_SECRET_KEY=${UNYC_SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
