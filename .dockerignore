@@ -1,0 +1,22 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# project
+*/unycenv
+.env
+db.sqlite3
+*.pyc
+*.log
+__pycache__
+
+# pytest:
+assets/
+report.html
+.pytest_cache
+
+# others
+.DS_Store

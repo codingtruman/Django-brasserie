@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+</head>
+<body>
+    <p>
+        <a href="/admin" style="margin-right: 4em;">admin login</a>
+    </p>
+
+    <HR style="border:3 double #987cb9" color=#987cb9 SIZE=5>
+
+    <p>
+        <a href="/api/references">
+            Check all beers
+        </a><br><br>
+        <a href="/api/references?ordering=ref" style="margin-right: 2em;">
+            Sort by ref, ASC
+        </a>
+        <a href="/api/references?ordering=-ref" style="margin-right: 2em;">
+            Sort by ref, DESC
+        </a>
+        <a href="/api/references?ordering=name" style="margin-right: 2em;">
+            Sort by name, ASC
+        </a>
+        <a href="/api/references?ordering=-name" style="margin-right: 2em;">
+            Sort by name, DESC
+        </a>
+        <a href="/api/references?available=true" style="margin-right: 2em;">
+            All available
+        </a>
+        <a href="/api/references?available=false">
+            All unavailable
+        </a>
+    </p>
+    <p>
+        <form action="api/references">
+            <input type="text" name="bar" style="width: 300px;" placeholder="Enter a bar counter id to check all available results">
+            <button type="submit">Search</button>
+        </form>
+    </p>
+    <p>
+        <form action="api/references">
+            <input type="text" name="search" style="width: 400px;" placeholder="Enter a keyword in beer ref, name or description to search for beers">
+            <button type="submit">Search</button>
+        </form>
+    </p>
+    
+    <HR style="border:3 double #987cb9" color=#987cb9 SIZE=5>
+
+    <p>
+        <a href="/api/bars">
+            Check all bar counters
+        </a><br><br>
+        <a href="/api/bars?ordering=pk" style="margin-right: 2em;">
+            Sort by pk, ASC
+        </a>
+        <a href="/api/bars?ordering=-pk" style="margin-right: 2em;">
+            Sort by pk, DESC
+        </a>
+        <a href="/api/bars?ordering=name" style="margin-right: 2em;">
+            Sort by name, ASC
+        </a>
+        <a href="/api/bars?ordering=-name">
+            Sort by name, DESC
+        </a>
+    </p>
+
+    <HR style="border:3 double #987cb9" color=#987cb9 SIZE=5>
+
+    <p>
+        <a href="/api/stocks">
+            Check all stocks associated to beers and counters (Authenticated users)
+        </a><br><br>
+        <a href="/api/stocks?ordering=reference" style="margin-right: 2em;">
+            Sort by pk of beers, ASC
+        </a>
+        <a href="/api/stocks?ordering=-reference" style="margin-right: 2em;">
+            Sort by pk of beers, DESC
+        </a>
+        <a href="/api/stocks?ordering=bar" style="margin-right: 2em;">
+            Sort by pk of bar counters, ASC
+        </a>
+        <a href="/api/stocks?ordering=-bar" style="margin-right: 2em;">
+            Sort by pk of bar counters, DESC
+        </a>
+        <a href="/api/stocks?ordering=stock" style="margin-right: 2em;">
+            Sort by quantity of stocks, ASC
+        </a>
+        <a href="/api/stocks?ordering=-stock">
+            Sort by quantity of stocks, DESC
+        </a><br>
+        <p>
+            <form action="api/stocks">
+                <input type="text" name="reference" style="width: 300px;" placeholder="Enter a reference id of a beer to check its stock">
+                <button type="submit">Search</button>
+            </form>
+        </p>
+        <p>
+            <form action="api/stocks">
+                <input type="text" name="bar" style="width: 300px;" placeholder="Enter a bar counter id to check its stock">
+                <button type="submit">Search</button>
+            </form>
+        </p>
+    </p>
+
+    <HR style="border:3 double #987cb9" color=#987cb9 SIZE=5>
+
+    <p>
+        <a href="/api/statistics">
+            Check all statistics of bar counters (Authenticated users)
+        </a>
+    </p>
+    
+    <HR style="border:3 double #987cb9" color=#987cb9 SIZE=5>
+
+    <p>
+        Please use Postman to order beers (Anonymous users).
+    </p>
+    <p>
+        <a href="/api/orders">Check all orders (Authenticated users)</a>
+    </p>
+</body>
+</html>
