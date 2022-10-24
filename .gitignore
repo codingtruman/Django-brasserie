@@ -2,7 +2,6 @@
 .env
 db.sqlite3
 *.pyc
-warning.log
 __pycache__
 # pytest:
 assets/
